@@ -1,0 +1,1204 @@
+/*@import url('https://fonts.google.com/specimen/League+Spartan?query=spartan');  */
+@import url('https://fonts.googleapis.com/css?family=Tangerine|Roboto|Droid+Sans');
+
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Roboto'
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;   
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+}
+
+h6{
+font-weight: 700;
+font-size: 12px;
+}
+
+p{
+    font-size: 16px;
+color: #456b52;
+margin: 15px 0 20px 0;
+}
+/*OVO JE PADDING KOJI SAM PREDODREDIO I KOJI SE KORISTI ZA SKORO SVE OSIM IZNIMKE KOJE STILIZUJEM USPUT */
+.section-p1{  
+    padding: 40px 80px;
+}
+/*MARGINA KOJU SAM PREDODREDIO KORISTI SE PO POTREBI */
+.section1-m1{
+    margin: 40px 0;
+}
+/*DUGME SA KLASOM NORMAL I KAD GA HOCU POZVATI SAMO TU KLASU UBACIM U HTML */
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color:#fff ;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* DUGME SA KLASOM TRANS koje radi transition kad predjes preko njega  */
+
+button.trans {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
+}
+
+body{
+    width: 100%;
+    font-family: 'Roboto', serif;
+}
+
+
+/* header nav bar*/
+
+#header{
+
+    background-color: rgb(174 213 182);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    /*background-color: #E3E6F3; */
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+#navbar li{
+    list-style: none;
+    padding:0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: rgba(110 110 110)  /* #088178*/
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgba(110 110 110) ;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#mobile-menu{
+    display: none;
+    align-items: center;
+}
+
+#close{
+    display: none;
+}
+
+
+
+/* hero */
+
+#hero {
+    
+        background-image: url("img/hero/za\ naslovnu\ sliku.jpg") ;
+        
+            height: 80vh;
+            width: 100%;
+            background-size: cover;
+            background-position: top 25% right 0;
+            padding:  0  80px;
+            display: flex;
+            flex-direction: column;
+            border-top: none;
+           
+            
+        }
+       
+ 
+
+
+
+
+
+
+
+
+/* proizvodi */ /* PROIZVOD DRUGA KOLONA RADI KAO I PRVA TAKO DA NEMA POTREBE DA SE SVE PONOVO STILIZUJE SMO SE PREKOPIRA */
+
+
+#product1 {
+    text-align: center;
+}
+
+#product1 .container-proizvoda {
+display: flex;
+justify-content: space-between;
+padding-top: 20px;
+flex-wrap: wrap;
+}
+
+#product1 .proizvod {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.2) ;
+    margin: 10px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#product1 .proizvod:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.6) ;
+}
+
+#product1 .proizvod img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .proizvod .opis{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .proizvod .opis span{
+    color: #060606; 
+    font-size: 12px;
+}
+
+#product1 .proizvod .opis h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product1 .proizvod .opis i{
+    font-size: 12px;
+    color: #ffe608;
+}
+
+#product1 .proizvod .opis h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(160 160 160);
+}
+
+#product1 .proizvod .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #0458ffdd;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+/* BANNER Call to action PRVI */
+
+#banner{
+    background-image: url("img/banner/za\ drugu\ sliku.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 360px;
+    padding-left: 180px;
+    
+}
+#banner h4{
+    color: #fff;
+    font-size: 12px;
+
+}
+#banner h2{
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+
+}
+#banner  h2 span{
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+    color: rgb(160 160 160);
+
+}
+
+#banner button:hover{
+    background-color:rgb(160 160 160) ;
+    color: #fff;
+}
+
+
+
+/* Banner sa DVIJE  KARTICE sa kolekcijama */
+
+#mali-banner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+#mali-banner .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("img/banner/b17.jpg");
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+#mali-banner .banner-box2 {
+    background-image: url("img/banner/b10.jpg");
+   
+}
+
+#mali-banner .banner-box h4 { 
+    color:#fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#mali-banner .banner-box h2 { 
+    color:#fff;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#mali-banner .span { 
+    color:#fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+#mali-banner .banner-box:hover button {
+background:rgb(174 213 182);
+border: 1px solid rgb(174 213 182) ;
+}
+/* KOLEKCIJE TRI KARTICE */
+
+#text-banner {
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: space-between;
+   flex-wrap: wrap;
+   padding: 0 80px;
+}
+
+#text-banner .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("img/banner/b7.jpg");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#text-banner .banner-box2{
+    background-image: url("img/banner/b4.jpg");
+}
+#text-banner .banner-box3{
+    background-image: url("img/banner/b18.jpg");
+}
+
+#text-banner  h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 22px;
+}
+#text-banner  h3{
+   color: #a71212; /* MIJENJAJ BOJU U OSNOSU NA SLIKE zBOG VIDLJIVOSTI */
+   font-weight: 800;
+   font-size: 15px;
+}
+
+ /*U kojem ce musterije unositi mejl ako zele */
+
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+   /* background-image: url("img/banner/b14.png");*/
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: rgb(174 213 182);
+}
+
+#newsletter h4{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+}
+#newsletter p{
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+}
+#newsletter span{
+    color: rgb(160 160 160);
+}
+
+#newsletter .textbox{
+    display: flex;
+    width: 40%;
+
+}
+
+#newsletter input{
+    height: 3.125rem; ;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius:0 ;
+    border-bottom-right-radius:0 ;
+}
+
+#newsletter button{
+    background-color: rgb(160 160 160);
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius:0 ;
+    border-bottom-left-radius:0 ;
+
+
+}
+
+
+footer {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+footer .col{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo{
+    margin-bottom: 30px;
+
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    
+
+}
+footer a{
+    font-size: 13px;
+    color: #222;
+    text-decoration:none;
+    margin-bottom: 10px;
+
+
+}
+
+footer .follow i{
+    color:#456b52;
+    padding-right:  4px;
+    cursor:pointer;
+}
+
+footer .install .row img{
+    border: 1px solid rgb(174 213 182);
+    border-radius: 6px;
+}
+
+footer .install img{
+    margin: 10px 0 15px 0;
+
+}
+
+footer .follow i:hover,
+footer a:hover {
+    color: rgb(174 213 182);
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    ;
+}
+
+
+/*SHOP PAGE CSS */
+
+
+
+#page-header{
+    background-image: url("img/banner/b1.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 14px;
+
+}
+#page-header h2,
+#page-header p {
+    color: #fff;
+}
+#stranice{
+    text-align: center;
+}
+
+#stranice a{
+    
+    text-decoration: none;
+    background-color: rgb(174 213 182);
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+
+#stranice a i{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* STRANICA JEDAN PROIZVOD CSS */
+
+
+
+#detalji-proizvod {
+    display: flex;
+    margin-top: 20px;
+}
+
+
+#detalji-proizvod .single-proizvod-image {
+    width: 40%;
+    margin-right: 50px;
+
+}
+
+.small-img-group{
+    
+    display: flex;
+    justify-content:space-between;
+
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+
+
+#detalji-proizvod .single-proizvod-detalji{
+    width: 50%;
+    padding-top: 30px;
+
+}
+
+#detalji-proizvod .single-proizvod-detalji h6{
+    padding: 40px 0 20px 0;
+}
+#detalji-proizvod .single-proizvod-detalji h4{
+    padding: 40px 0 20px 0;
+}
+#detalji-proizvod .single-proizvod-detalji h2{
+    font-size: 26px;
+}
+
+#detalji-proizvod .single-proizvod-detalji select{
+    display: block;
+    margin:10px ;
+    padding:5px 10px ;
+}
+#detalji-proizvod .single-proizvod-detalji select:focus{
+    outline: none;
+}
+
+#detalji-proizvod .single-proizvod-detalji input{
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#detalji-proizvod .single-proizvod-detalji input:focus{
+   outline: none;
+}
+
+#detalji-proizvod .single-proizvod-detalji button{
+    background-color: rgb(174 213 182);
+    color: #fff;
+}
+
+#detalji-proizvod .single-proizvod-detalji span{
+    line-height: 25px;
+}
+
+
+
+/* BLOG CSS*/
+
+
+#page-header.blog-header{
+    background-image: url("img/banner/b19.jpg");
+}
+
+#blog{
+    padding: 150px 150px 0 150px;
+}
+
+#blog .blog-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-bottom: 90px;
+}
+
+#blog .blog-img{
+    width: 50%;
+    margin-right: 40px;
+
+}
+
+
+
+#blog img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#blog .blog-detalji{
+    width: 50%;
+
+}
+
+#blog .blog-detalji a{
+    text-decoration: none;
+    font-size: 11px;
+    color: #000;
+    font-weight: 700;
+    position: relative;
+    transition: 0.2s ease;
+}
+#blog .blog-detalji a::after{
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 4px;
+    right: -60px;
+
+}
+
+#blog .blog-detalji a:hover{
+    color: rgb(174 213 182);
+}
+
+#blog .blog-detalji a:hover:after{
+   background-color: rgb(174 213 182);
+}
+
+#blog .blog-box h1{
+    position: absolute;
+    top: -40px;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    color: #c9c9c9;
+    z-index: -9;
+}
+
+/*ABOUT STRANICA*/
+
+#page-header.about-header{
+    background-image: url("img/about/banner.png");
+}
+
+#about-detalji{
+    display: flex;
+    align-items: center;
+    
+}
+
+#about-detalji img{
+    width: 50%;
+    height: auto;
+}
+#about-detalji div{
+    padding-left: 40px;
+
+
+}
+
+#about-app{
+    text-align: center;
+}
+
+
+#about-app .video{
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+
+#about-app .video video{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+#about-app a{
+    text-decoration: none;
+    color: rgb(174 213 182);
+}
+
+
+
+/*KONTAKT STRANICA*/
+#page-header.kontakt-header{
+    background-image: url("img/about/banner.png");
+}
+
+   
+    
+#registracija{
+    display: flex;
+    align-items: flex-start;
+}
+
+
+    
+#registracija form div {
+        padding: 15px 0;
+    }
+
+    #registracija form {
+        max-width: 600px;
+        margin: auto;
+    }
+    
+    #registracija form div label {
+       /* display: block; */
+        font-weight: bold;
+        font-size: 16px;
+    }
+    
+    #registracija form div input {
+        height: 50px;
+        width: 100%;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    
+    #registracija form div button {
+        padding: 10px 30px;
+        font-size: 18px;
+    }
+    
+    #registracija form ul {
+        list-style: none;
+    }
+    
+    #registracija form ul li {
+        color: red;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+/*CART*/
+
+
+.container {
+	max-width: 800px;
+	margin: auto;
+	border: 2px solid rgb(174 213 182);
+	border-radius: 30px;
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 60px;
+}
+
+.items {
+	width: 60%;
+	padding: 20px;
+}
+
+.cart {
+	width: 40%;
+	padding: 20px;
+	border-left: 2px solid rgb(174 213 182);
+	
+	background-size: 150px;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+    
+}
+
+.single-item {
+	display: flex;
+	border-bottom: 1px solid grey;
+	padding: 15px 0;
+}
+
+.single-item:last-child {
+	border-bottom: 0;
+}
+
+.single-item img {
+	max-width: 150px;
+}
+
+.single-item .si-content {
+	width: 70%;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+
+.single-item .si-content p {
+	font-size: 20px;
+}
+
+.single-item .actions {
+	width: 30%;
+}
+
+.single-item .actions input {
+	height: 40px;
+	width: 60px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.single-item .actions button {
+	width: 60px;
+	margin-top: 10px;
+	height: 30px;
+	font-size: 16px;
+}
+
+.cart-single-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.cart-single-item h3 {
+	margin-bottom: 0;
+}
+
+.cart-single-item button {
+	padding: 5px;
+}
+
+.total {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	font-size: 24px;
+}
+
+
+
+
+/* START MEDIA QUERY RESPONSIVE*/
+
+@media(max-width:799px){
+    .section-p1 {
+        padding: 40px 40px;
+    }
+
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-items: flex-start;
+        position: fixed;
+        top:0;
+        right:-300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0,0,0,0.2);
+        padding:80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active{
+        right:0px;
+    }
+
+    #navbar li{
+        margin-bottom: 
+        25px;
+    }
+
+    #mobile-menu{
+        display: flex;
+        align-items: center;
+    }
+    #mobile-menu i {
+        color:#1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close {
+       /*
+        position: absolute;
+        */
+        display: initial;
+        top:30px;
+        left:30px;
+        color: #222;
+        font-size: 24px;
+    
+    }
+
+    #lg-bag{
+        display: none;
+    }
+
+    #hero {
+        
+        height: 70vh;
+        padding: 0  80px;
+        background-position: top 30% right 30% ;
+        
+    }
+
+   
+
+    
+
+    #product1 .container-proizvoda {
+
+        justify-content: center;
+        
+    }
+
+    #product1 .proizvod {
+        margin: 10px;
+        
+    }
+
+    #banner {
+        height: 20vh;
+       
+    }
+
+    #mali-banner .banner-box {
+     
+        min-width: 100%; /**/
+        height: 30vh;
+       
+    }
+    #text-banner {
+       
+        padding: 0 40px;
+    }
+    #text-banner .banner-box {
+      
+        width: 28%;
+       
+    }
+    #newsletter .textbox {
+       
+        width: 70%;
+    }
+
+
+    /*CONTACT SEKCIJA */
+
+    /*
+    #form-detalji {
+        
+        padding: 40px;
+        
+    }
+    #form-detalji form {
+        width: 50%;
+        
+    }
+*/
+/*
+    #korpa-kartica {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+       
+        
+        padding: 20px 20px;
+
+    
+    }*/
+
+
+}
+
+
+
+/* mali ekran telefon*/
+@media (max-width: 477px) {
+    .section-p1 {
+        padding: 20px;
+    }
+    #header {
+        
+        padding: 10px 30px;
+       
+    }
+    h2 {
+        font-size: 32px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+    #hero {
+        height: 70vh;
+        padding: 0  20px;
+        background-position: 55%;
+    }
+
+   
+
+    #product1 .proizvod {
+        width: 100%;
+    }
+
+    #banner {
+        height: 40vh; 
+    }
+
+    #mali-banner .banner-box {
+        height: 40vh;
+    }
+
+    #mali-banner .banner-box2 {
+       margin-top: 20px;
+    }
+    #text-banner {
+        padding: 0 20px;
+    }
+
+    #text-banner .banner-box {
+        width: 100%;
+    }
+
+    #newsletter .textbox {
+        width: 100%;
+    }
+
+    #newsletter {
+        padding: 40px 20px s;
+    }
+
+    footer .copyright {
+        
+        text-align: start;
+        
+    }
+    /* JEDAN PROIZVOD MALI EKRAN*/
+
+    #detalji-proizvod {
+        display: flex;
+        flex-direction: column;
+    }
+    #detalji-proizvod .single-proizvod-image {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #detalji-proizvod .single-proizvod-detalji {
+        width: 100%;
+        margin-right: 40px;
+        
+    }
+
+    /*BLOG MALI EKRAN */
+
+    #blog {
+        padding: 100px 20px 0 20px;
+    }
+
+    #blog .blog-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+
+    #blog .blog-img {
+        width: 100%;
+        margin-right: 40px; 
+        margin-bottom: 20px;
+    }
+    
+    #blog .blog-detalji{
+        width: 100%S;
+    }
+
+    /*ABOUT APP MALI */
+
+    #about-detalji {
+        
+        flex-direction: column;
+        
+    }
+
+    #about-detalji img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #about-detalji div{
+        padding-left: 0pxs;
+    }
+
+    #about-app .video{
+        width: 90%;
+        
+        
+    }
+
+    /*CONTACTS*/
+    #page-header {
+        padding-bottom: 20px;
+    }
+
+    #contact-detalji {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    #contact-detalji .svi-detalji{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #contact-detalji .map {
+        width: 100%;
+        height: 400px;
+    }
+   
+
+     /*
+     KORPA KARTICA
+     */
+    #korpa-kartica {
+        
+        flex-direction: column;
+        
+       
+       
+    }
+
+    #kupon {
+        width: 100%;
+    }
+
+    #korpa-total {
+        width: 100%;
+        padding: 20px;
+    }
+
+}
+
